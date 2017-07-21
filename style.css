@@ -800,16 +800,42 @@ Text Domain:   iott
 
 
 
-
+/*****************************/
 
 .archive-custom-post-type .entry-header--archive {
     position: absolute;
     background-color: #ffffff;
     bottom: 0;
+    right: 0;
     width: 60%;
-    max-height: 100px;
+    max-height: 85px;
     overflow: hidden;
     padding: 15px 20px !important;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible;
+    -webkit-transition: all .6s ease 0.3s;
+    -moz-transition: all .6s ease 0.3s;
+    -ms-transition: all .6s ease 0.3s;
+    -o-transition: all .6s ease 0.3s;
+    transition: all .6s ease 0.3s;
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+}
+
+
+.archive-custom-post-type .custom-post-item:hover .entry-header--archive {
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(100px);
+    -moz-transform: translate(100px);
+    -ms-transform: translate(100px);
+    -o-transform: translate(100px);
+    transform: translate(100px);
 }
 
 .archive-custom-post-type .post {
@@ -824,6 +850,86 @@ Text Domain:   iott
     color: #55d861;
     font-size: 15px;
 }
+
+.archive-custom-post-type .post-thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.archive-custom-post-type .post-thumbnail img {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+
+.archive-custom-post-type .post-thumbnail .info {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+}
+
+
+.archive-custom-post-type .custom-post-item:hover .post-thumbnail .info {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.archive-custom-post-type .post-thumbnail .info .info-inner {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    text-align: center;
+    width: 100%;
+}
+
+.archive-custom-post-type .post-thumbnail .info .info-icons {
+    display: inline-block;
+    height: 2.5em;
+    line-height: 2.5em;
+    width: 2.5em;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0);
+    color: #55d861;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 
 /* parsaatef */
 .mafir-why-wood-container {
@@ -1051,7 +1157,7 @@ Text Domain:   iott
 .sliders-img .slide-item .info .info-inner {
     position: absolute;
     top: 50%;
-    margin-top: -30px;
+    margin-top: -38px;
     text-align: center;
     width: 100%;
 }
@@ -1061,15 +1167,10 @@ Text Domain:   iott
     height: 2.5em;
     line-height: 2.5em;
     width: 2.5em;
-    font-size: 20px;
+    font-size: 25px;
     background: rgba(0, 0, 0, 0.5);
     color: #55d861;
     margin: 0;
-    -webkit-transform: translateY(50%);
-    -moz-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -o-transform: translateY(50%);
-    transform: translateY(50%);
     overflow: hidden;
     position: relative;
     margin: 0 5px;
@@ -1162,4 +1263,9 @@ Text Domain:   iott
 .slick-dots li {
     margin: 0;
     position: static;
+}
+
+
+.about-company-container .title h2 {
+    margin: 0;
 }
