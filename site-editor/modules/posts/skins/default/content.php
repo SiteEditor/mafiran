@@ -1,33 +1,25 @@
-<div class="item">
+<div class="slid-item">
 
-	<?php
+    <div class="title"><h2><?php the_title(); ?></h2></div>
 
-    $attachment_id   = get_post_thumbnail_id();
+    <div class="spr-general"></div>
 
-	$img = get_sed_attachment_image_html( $attachment_id , "" , "320X240" );
+    <div class="desc">
+        <?php
 
-	/*$attachment_full_src = wp_get_attachment_image_src( $attachment_id, 'full' ); 
+        /*$post_content = get_the_excerpt();
 
-	$attachment_full_src = $attachment_full_src[0];
+        if( strlen( $post_content ) > $excerpt_length ){
 
-	$excerpt_length = 50;
+            $post_content = mb_substr( get_the_title(), 0, $excerpt_length ) . "...";
 
-    $content_post = apply_filters('the_excerpt', get_the_excerpt());
+        }
 
-    # FILTER EXCERPT LENGTH
-    if( strlen( $content_post ) > $excerpt_length )
-        $content_post = mb_substr( $content_post , 0 , $excerpt_length - 3 ) . '...';*/
+        echo $post_content;*/
 
-    ?>
-    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-        	<?php 
-		        if ( $img ) {
-		        	echo $img['thumbnail'];
-		        }
-	        ?>
+        the_content();
 
-        <div class="caption">
-            <h5><?php the_title(); ?><hr class="little-separator" /><span><?php iott_the_field('subtitle'); ?></span></h5>
-        </div>
-    </a>
+        ?>
+    </div>
+
 </div>

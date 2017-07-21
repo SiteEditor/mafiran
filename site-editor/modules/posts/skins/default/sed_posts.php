@@ -1,11 +1,6 @@
-<div <?php echo $sed_attrs; ?> class="module module-posts module-posts-default <?php echo $class; ?> ">
+<div <?php echo $sed_attrs; ?> class="module module-posts module-posts-skin1 <?php echo $class; ?> ">
 
     <?php
-    if( $show_title ) {
-        ?>
-        <div class="posts-entry-title"><?php echo $title;?></div>
-        <?php
-    }
 
     $custom_query = new WP_Query( $args );
 
@@ -13,23 +8,24 @@
 
         ?>
 
-    <section class="features">
-        <div class="slider-wrap">
-            <div class="carousel" >
+        <div class="about-company-container">
 
-        <?php
-        // Start the Loop.
-        while ( $custom_query->have_posts() ){
-            $custom_query->the_post();
+            <div class="about-company-slider">
 
-            include dirname(__FILE__) . '/content.php';
+                <?php
+                // Start the Loop.
+                while ( $custom_query->have_posts() ){
+                    $custom_query->the_post();
 
-        }
+                    include dirname(__FILE__) . '/content.php';
 
-        ?>
+                }
+
+                ?>
+
             </div>
+
         </div>
-    </section>
 
         <?php
 
