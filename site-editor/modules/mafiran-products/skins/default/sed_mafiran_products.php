@@ -32,29 +32,35 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 text-right">
-                        <div class="logo-box">&nbsp;</div>
-                    </div>
-
                     <div class="clear"></div>   
 
                     <div class="col-sm-6 text-left">
 
-                        <div class="arrows-box mafiran-next-prev-controler">
-                            <a class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></a>
-                            <a class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></a>
+                        <div class="text-left">
+                            <div class="arrows-box mafiran-next-prev-controler">
+                                <span class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></span>
+                                <span class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></span>
+                            </div>
+                            <div class="title-general right md">Nous croyons que</div>
                         </div>
 
                         <div class="content-container text-right">
                             <div class="punchline">
                                 <div class="title">Ah oui…</div>
+                                <div class="spr-general"></div>
                                 <p class="desc">Nous croyons que les plus belles que dan</p>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 margin-top-box">
+
+                        <div class="text-right">
+                            <div class="title-general left md">Nous croyons que</div>
+                            <div class="logo-box">&nbsp;</div>
+                        </div>
+
                         <div class="slide-container slide-second sed-mafiran-slider" data-slider-nav=".slide-first">
 
                             <div class="slide-item">
