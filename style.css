@@ -34,12 +34,13 @@ Text Domain:   iott
 }
 
 .spr-general {
-    display: block;
+    display: inline-block;
     width: 40px;
     height: 2px;
     background-color: #55d861;
     border-radius: 3px;
     margin: 10px 0;
+    clear: both;
 }
 
 .title-general {
@@ -932,6 +933,19 @@ Text Domain:   iott
     margin: 0;
 }
 
+.sliders-img .content-container {
+    padding: 10px;
+    padding-left: 0;
+}
+
+.rtl .sliders-img .content-container {
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+.sliders-img .content-container .desc {
+    margin: 0;
+}
 
 @media (min-width: 768px) {
 
@@ -992,5 +1006,63 @@ Text Domain:   iott
 }
 
 .sliders-img .title-general {
-    margin: 10px;
+    margin: 10px;    
+}
+
+.sliders-img .slide-item {
+    position: relative;
+    display: inline-block;
+}
+
+.sed-content-product-default .products .product-buttons {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+}
+
+
+.sed-content-product-default .products .product:hover .product-buttons {
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.sed-content-product-default .products .product-buttons .product-shop-details, 
+.sed-content-product-default .products .product-buttons .add_to_card_container {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #55d861;
+    margin: 0;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+    overflow: hidden;
+    position: relative;
 }

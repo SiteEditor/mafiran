@@ -38,8 +38,8 @@
 
                         <div class="text-left">
                             <div class="arrows-box mafiran-next-prev-controler">
-                                <span class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></span>
-                                <span class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></span>
+                                <span class="arrow previous"><i class="fa fa-angle-left"></i></span>
+                                <span class="arrow next"><i class="fa fa-angle-right"></i></span>
                             </div>
                             <div class="title-general right"><h5>Nous croyons que</h5></div>
                         </div>
@@ -74,6 +74,14 @@
 
                             <div class="slide-item">
                                 <img src="https://www.sweetpunk.com/Public/Files/home_slideshow/sp_site_faceshome_stephane_864b6cdfd3_43c876384c.jpg" alt="">
+                                <div class="info">
+                                    <div class="info-inner">
+                                        <div class="info-content">
+                                            <span class="info-icons"><i class="fa fa-search"></i></span>
+                                            <span class="info-icons"><i class="fa fa-link"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
