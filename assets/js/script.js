@@ -15,7 +15,7 @@
 
             $(this).slick({
                 //mobileFirst         : true ,
-                arrows              : true,
+                arrows              : false,
                 slidesToShow        : 1,
                 slidesToScroll      : 1,
                 dots                : false,
@@ -26,7 +26,9 @@
                 infinite            : true, 
                 asNavFor            : $sliderNav,
                 autoplay            : true,
-                easing              : "easeOutQuad"
+                autoplaySpeed       : 4500 ,
+                easing              : "easeOutQuad",
+                speed               : 700
                 //prevArrow : '<span class="slide-nav-bt slide-prev custom-btn custom-btn-secondary"><i class="fa fa-angle-left"></i></span>',
                 //nextArrow : '<span class="slide-nav-bt slide-next custom-btn custom-btn-secondary"><i class="fa fa-angle-right"></i></span>',
             });

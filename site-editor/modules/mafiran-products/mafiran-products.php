@@ -32,7 +32,7 @@ class PBMafiranProductsShortcode extends PBShortcodeClass{
     function get_atts(){
 
         $atts = array(
-            "images_size"                   => 'thumbnail'
+            "product_description"                   => ''
         );
 
         return $atts;
@@ -66,40 +66,28 @@ class PBMafiranProductsShortcode extends PBShortcodeClass{
 
         $params = array();
 
-        $params['images_size'] = array(
-            "type"          => "image-size" ,
-            "label"         => __("Image Size Field", "site-editor"),
-            "description"   => __("This option allows you to set a title for your image.", "site-editor"),
-            "panel"         => "mafiran_products_settings_panel" ,
-        );
-
-        $params['show_title'] = array(
-            'label'             => __('Show Title', 'site-editor'),
-            'type'              => 'switch',
-            'choices'           => array(
-                "on"       =>    "ON" ,
-                "off"      =>    "OFF" ,
-            ),
-            "panel"         => "posts_settings_panel" ,
-        );
-
-        $params['title'] = array(
-            "type"              => "text" ,
-            "label"             => __("Title", "site-editor"),
+        $params['product_description'] = array(
+            "type"              => "textarea" ,
+            "label"             => __("Product Description", "site-editor"),
             "description"       => __("Module Title", "site-editor"),
             "placeholder"       => __("Enter Module Title", "site-editor"),
-            "panel"             => "posts_settings_panel",
-            'dependency'    => array(
-                'queries'  =>  array(
-                    array(
-                        "key"       => "show_title" ,
-                        "value"     => true ,
-                        "compare"   => "==="
-                    )
-                )
-            )
+            "panel"             => "mafiran_products_settings_panel",
         );
 
+        $params['animation'] =  array(
+            "type"                => "animation" ,
+            "label"               => __("Animation Settings", "site-editor"),
+            'button_style'        => 'menu' ,
+            'has_border_box'      => false ,
+            'icon'                => 'sedico-animation' ,
+            'field_spacing'       => 'sm' ,
+            'priority'            => 530 ,
+        );
+
+        $params['row_container'] = array(
+            'type'          => 'row_container',
+            'label'         => __('Module Wrapper Settings', 'site-editor')
+        );
        
 
         return $params;
