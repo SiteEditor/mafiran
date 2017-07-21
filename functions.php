@@ -17,6 +17,7 @@ function mafiran_enqueue_styles() {
      */
     wp_enqueue_script( "mafiran-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' ) , "1.0.0" , true );
 
+    wp_enqueue_script( "mafiran-balls-script" , get_stylesheet_directory_uri() . '/assets/js/balls.js' , array( 'jquery', 'sed-livequery' ) , "1.0.0" , true );
 
     //wp_enqueue_script('jquery-scrollbar');
 
