@@ -23,6 +23,14 @@
 
                 ?>
 
+                <div class="mafiran-slider-nav">
+                    <span class="slide-nav-bt slide-prev custom-btn custom-btn-secondary"><i class="fa fa-angle-left"></i></span>
+                    <span class="slide-nav-bt slide-next custom-btn custom-btn-secondary"><i class="fa fa-angle-right"></i></span>
+                    <div class="mafiran-slick-nav">
+                        <span class="mafiran-slick-bar"></span>
+                    </div>
+                </div>
+
             </div>
 
         </div>
