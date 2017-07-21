@@ -1241,6 +1241,10 @@ Text Domain:   iott
     vertical-align: top;
     margin: 0;
     margin-top: 50%;
+    background-image: url(images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .sliders-img .arrows-box {
@@ -1252,6 +1256,10 @@ Text Domain:   iott
     background-color: #999;    
     padding: 60px 0;
     text-align: center;
+    background-image: url(images/arrows.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .sliders-img img {
@@ -1269,11 +1277,19 @@ Text Domain:   iott
 .sliders-img .arrows-box .arrow > i {
     font-size: 70px;
     color: #55d861;
-    width: 40px;
+    width: 60px;
     height: 70px;
     text-align: center;
 }
 
 .sliders-img .arrows-box .arrow {
     display: inline-block;
+}
+
+.rtl .sliders-img .arrows-box .arrow.previous > i:before {
+    content: "\f105";
+}
+
+.rtl .sliders-img .arrows-box .arrow.next > i:before {
+    content: "\f104";
 }
