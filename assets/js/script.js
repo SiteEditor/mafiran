@@ -37,7 +37,11 @@
 
             $(".slide-first.sed-mafiran-slider").slick("slickNext");
 
-            //$(this).slick("slickPrev");
+        });
+
+        $(".mafiran-next-prev-controler .previous").on("click" , function(){
+
+            $(".slide-first.sed-mafiran-slider").slick("slickPrev");
 
         });
 
