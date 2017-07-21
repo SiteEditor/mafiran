@@ -1075,3 +1075,91 @@ Text Domain:   iott
     margin: 0 5px;
     cursor: pointer;
 }
+
+
+/******************* slick slider *****************/
+
+.slick-slider .slide-next,
+.slick-slider .slide-prev,
+.slick-slider .slide-nav-bt {
+    position: absolute;
+    top: auto;
+    bottom: -34px;
+    font-size: 24px;
+    width: 10px;
+    height: 20px;
+    padding: 0;
+    min-width: 0;
+    line-height: 20px;
+    margin-top: 0;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    color: #aaa;
+}
+
+.slick-slider .slide-next {
+    right: -5px;
+}
+
+.slick-slider .slide-prev {
+    left: auto;
+    right: 100px;
+    margin-right: -5px;
+}
+
+.slick-list {
+  
+}
+
+.slick-dots {
+    bottom: -30px;
+    text-align: right;
+    font-size: 0;
+    margin: 0;
+    display: inline-block !important;
+    width: 100px;
+    border-top: 1px solid #aaa;
+    padding: 0;
+}
+
+.slick-dots li button:before {
+    content: "";
+    background: #333;
+    border-radius: 100px;
+    opacity: .25;
+    height: 0px;
+}
+
+.slick-dots li,.slick-dots li button {
+    height: 0;
+    padding: 0;
+}
+
+.slick-dots li button:focus:before, 
+.slick-dots li button:hover:before,
+.slick-dots li.slick-active button:before {
+    background: #55d861;
+    opacity: 1;
+}
+
+.slick-dots li button:before,
+.slick-dots li {
+    width: 0;
+    min-width: 0;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li.slick-active {
+    width: 25px;
+    height: 3px;
+    margin-top: -2px;
+}
+ 
+.slick-dots li {
+    margin: 0;
+    position: static;
+}
