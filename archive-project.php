@@ -33,10 +33,8 @@
                             <?php endif; ?>
 
                             <header class="entry-header entry-header--archive">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                    <div class="entry-title"><?php the_title(); ?></div>
-                                    <div class="entry-content"><?php the_content(); ?></div>
-                                </a>
+                                <div class="entry-title"><?php the_title(); ?></div>
+                                <div class="entry-content"><?php the_content(); ?></div>
                             </header>
                         </article>
                     </div>
