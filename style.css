@@ -1249,7 +1249,9 @@ Text Domain:   iott
     display: inline-block;
     vertical-align: top;
     margin: 0;
-    background-color: #999;
+    background-color: #999;    
+    padding: 60px 0;
+    text-align: center;
 }
 
 .sliders-img img {
@@ -1260,6 +1262,18 @@ Text Domain:   iott
     margin: 0;
 }
 
-.slide-second {
+.sliders-img .slide-second {
     margin-top: -11%;
+}
+
+.sliders-img .arrows-box .arrow > i {
+    font-size: 70px;
+    color: #55d861;
+    width: 40px;
+    height: 70px;
+    text-align: center;
+}
+
+.sliders-img .arrows-box .arrow {
+    display: inline-block;
 }
