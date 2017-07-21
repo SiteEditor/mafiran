@@ -49,17 +49,17 @@ function sed_mafiran_add_modules( $modules ){
 
     global $sed_pb_modules;
 
-
     $module_name = "themes/mafiran/site-editor/modules/posts/posts.php";
     $modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
 
-    /*$module_name = "themes/mafiran/site-editor/modules/iott-events/iott-events.php";
-    $modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/iott-events/iott-events.php', true, true);
-    */
+    $module_name = "themes/mafiran/site-editor/modules/mafiran-products/mafiran-products.php";
+    $modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/mafiran-products/mafiran-products.php', true, true);
     
     return $modules;
 
 }
+
+add_filter("sed_modules" , "sed_mafiran_add_modules" );
 
 
 
