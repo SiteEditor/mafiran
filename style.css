@@ -1027,7 +1027,7 @@ Text Domain:   iott
     display: inline-block;
     vertical-align: top;
     margin: 0;
-    background-color: #999;    
+    background-color: #3d3d3d;    
     padding: 60px 0;
     text-align: center;
     background-image: url(images/arrows.jpg);
@@ -1185,7 +1185,7 @@ Text Domain:   iott
 
 /******************* About Company *****************/
 
-.about-company-slider{
+.about-company-slider {
     margin-bottom: 15px;
 }
 
@@ -1251,3 +1251,59 @@ Text Domain:   iott
     left: 0;
     top: -2px;
 }
+
+
+
+/**************************/
+
+.single-project .sliders-img .arrows-box {
+    background-image: none;
+}
+
+.single-project .sliders-img .content-container {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.sliders-img .single-content-container .content-inner {
+    background-color: #e7e7e9;
+    padding: 50px 25px;
+}
+
+.sliders-img .single-content-container .arrows-box {
+    background-image: none;
+    width: 160px;
+    height: 100px;
+    padding: 13px 0;
+    margin: 0 auto -20px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.sliders-img .single-content-container .title h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.sliders-img .single-content-container .desc {
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+
+    .single-project .slide-container.slide-third {
+        margin-top: -180px;
+    }
+
+    .sliders-img .single-content-container {
+        margin: -80px 40px 0 0;
+    }
+
+    .rtl .sliders-img .single-content-container {
+        margin: -80px 0 0 40px;
+    }
+
+}
+
+
