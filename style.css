@@ -1184,6 +1184,11 @@ Text Domain:   iott
 
 
 /******************* About Company *****************/
+
+.about-company-slider{
+    margin-bottom: 15px;
+}
+
 .about-company-container .desc p,
 .about-company-container .title h3 {
     margin: 0;
