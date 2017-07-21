@@ -1184,7 +1184,7 @@ Text Domain:   iott
 
 
 /******************* About Company *****************/
-
+.about-company-container .desc p,
 .about-company-container .title h3 {
     margin: 0;
     padding: 0;
