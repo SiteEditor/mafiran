@@ -802,6 +802,15 @@ Text Domain:   iott
 
 /*****************************/
 
+.archive-custom-post-type .row {
+    margin: -45px;
+}
+
+.archive-custom-post-type .post {
+    position: relative;
+    margin: 30px;
+}
+
 .archive-custom-post-type .entry-header--archive {
     position: absolute;
     background-color: #ffffff;
@@ -836,10 +845,6 @@ Text Domain:   iott
     -ms-transform: translate(100px);
     -o-transform: translate(100px);
     transform: translate(100px);
-}
-
-.archive-custom-post-type .post {
-    position: relative;
 }
 
 .archive-custom-post-type .post-thumbnail {
