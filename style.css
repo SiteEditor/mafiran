@@ -1183,14 +1183,23 @@ Text Domain:   iott
 }
 
 
-/******************* slick slider *****************/
+/******************* About Company *****************/
 
-.slick-slider .slide-next,
-.slick-slider .slide-prev,
-.slick-slider .slide-nav-bt {
+.about-company-container .title h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.mafiran-slider-nav {
+    position: relative;
+}
+
+.mafiran-slider-nav .slide-next,
+.mafiran-slider-nav .slide-prev,
+.mafiran-slider-nav .slide-nav-bt {
     position: absolute;
     top: auto;
-    bottom: -34px;
+    bottom: 0;
     font-size: 24px;
     width: 10px;
     height: 20px;
@@ -1207,70 +1216,33 @@ Text Domain:   iott
     color: #aaa;
 }
 
-.slick-slider .slide-next {
+.mafiran-slider-nav .slide-next {
     right: -5px;
 }
 
-.slick-slider .slide-prev {
+.mafiran-slider-nav .slide-prev {
     left: auto;
     right: 100px;
     margin-right: -5px;
 }
 
-.slick-list {
-  
-}
-
-.slick-dots {
-    bottom: -30px;
+.mafiran-slider-nav .mafiran-slick-nav {
     text-align: right;
     font-size: 0;
     margin: 0;
-    display: inline-block !important;
+    display: inline-block;
     width: 100px;
     border-top: 1px solid #aaa;
     padding: 0;
+    position: relative;
 }
 
-.slick-dots li button:before {
-    content: "";
-    background: #333;
-    border-radius: 100px;
-    opacity: .25;
-    height: 0px;
-}
-
-.slick-dots li,.slick-dots li button {
-    height: 0;
-    padding: 0;
-}
-
-.slick-dots li button:focus:before, 
-.slick-dots li button:hover:before,
-.slick-dots li.slick-active button:before {
-    background: #55d861;
-    opacity: 1;
-}
-
-.slick-dots li button:before,
-.slick-dots li {
-    width: 0;
-    min-width: 0;
-}
-
-.slick-dots li.slick-active button:before,
-.slick-dots li.slick-active {
-    width: 25px;
+.mafiran-slider-nav .mafiran-slick-nav .mafiran-slick-bar {
+    width: 15px;
     height: 3px;
-    margin-top: -2px;
-}
- 
-.slick-dots li {
-    margin: 0;
-    position: static;
-}
-
-
-.about-company-container .title h2 {
-    margin: 0;
+    background-color: #55d861;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }

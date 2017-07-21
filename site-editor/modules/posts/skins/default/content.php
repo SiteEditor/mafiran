@@ -1,6 +1,6 @@
 <div class="slid-item">
 
-    <div class="title"><h2><?php the_title(); ?></h2></div>
+    <div class="title"><h3><?php the_title(); ?></h3></div>
 
     <div class="spr-general"></div>
 
