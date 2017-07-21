@@ -49,6 +49,9 @@
 
         $(".about-company-slider").livequery(function(){
 
+            var len = $(this).find(">.slid-item").length,
+                barWidth = 100;
+
             $(this).slick({
                 //mobileFirst         : true ,
                 arrows              : true,
@@ -61,10 +64,54 @@
                 touchMove           : true ,
                 infinite            : true, 
                 autoplay            : true,
-                easing              : "easeOutQuad",
+                easing              : "easeOutQuad"
                 //prevArrow : '<span class="slide-nav-bt slide-prev custom-btn custom-btn-secondary"><i class="fa fa-angle-left"></i></span>',
                 //nextArrow : '<span class="slide-nav-bt slide-next custom-btn custom-btn-secondary"><i class="fa fa-angle-right"></i></span>',
             });
+
+            var $bar = $(".mafiran-slick-nav > .mafiran-slick-bar");
+
+            $bar.width( barWidth / len );
+
+            var lenS = len < 10 ? "0" + len : len;
+
+            $(".mafiran-slider-nav-number").text( "01/" + lenS );
+
+            $(this).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+                //var $currentSlide = currentSlide + 1;
+
+                var barL = barWidth / len;
+
+                barL = barL * nextSlide;
+
+                $bar.animate({
+                    //opacity: 0.25,
+                    left: barL,
+                    //height: "toggle"
+                }, 500, function() {
+
+                    var curS = nextSlide + 1;
+
+                    curS = curS < 10 ? "0" + curS : curS;
+
+                    $(".mafiran-slider-nav-number").text( curS + "/" + lenS );
+
+                });
+
+            });
+
+        });
+
+        $(".mafiran-slider-nav .slide-next").on("click" , function(){
+
+            $(".about-company-slider").slick("slickNext");
+
+        });
+
+        $(".mafiran-slider-nav .slide-prev").on("click" , function(){
+
+            $(".about-company-slider").slick("slickPrev");
 
         });
 
