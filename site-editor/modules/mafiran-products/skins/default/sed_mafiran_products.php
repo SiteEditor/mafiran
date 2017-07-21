@@ -41,14 +41,15 @@
                                 <span class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></span>
                                 <span class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></span>
                             </div>
-                            <div class="title-general right md">Nous croyons que</div>
+                            <div class="title-general right">Nous croyons que</div>
                         </div>
 
                         <div class="content-container text-right">
                             <div class="punchline">
                                 <div class="title">Ah oui…</div>
                                 <div class="spr-general"></div>
-                                <p class="desc">Nous croyons que les plus belles que dan</p>
+                                <p class="desc">Vous êtes freelance et travailler seul depuis votre cuisine vous ennuie ? Sweet Punk vous propose 4 places en co-working dans un havre de paix à 2 pas de Saint-Lazare. Plus d'infos à l'adresse aurelie@sweetpunk.com. Vous êtes freelance et travailler seul depuis votre cuisine vous ennuie ? Sweet Punk vous propose 4 places en co-working dans un havre de paix à 2 pas de Saint-Lazare. Plus d'infos à l'adresse aurelie@sweetpunk.com.</p>
+                                <div class="spr-general"></div>
                             </div>
                         </div>
 
@@ -57,7 +58,7 @@
                     <div class="col-sm-6 margin-top-box">
 
                         <div class="text-right">
-                            <div class="title-general left md">Nous croyons que</div>
+                            <div class="title-general left">Nous croyons que</div>
                             <div class="logo-box">&nbsp;</div>
                         </div>
 

@@ -33,6 +33,39 @@ Text Domain:   iott
     clear: both;
 }
 
+.spr-general {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #55d861;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+
+.title-general {
+    border-width: 3px;
+    border-color: #55d861;
+    padding: 0 10px;
+}
+
+.title-general.left {
+    border-left-style: solid;
+}
+
+.title-general.right {
+    border-right-style: solid;
+}
+
+.rtl .title-general.left {
+    border-left-style: none;
+    border-right-style: solid;
+}
+
+.rtl .title-general.right {
+    border-left-style: solid;
+    border-right-style: none;
+}
+
 /***************** col *****************/
 
 .row {
@@ -956,4 +989,8 @@ Text Domain:   iott
 
 .sliders-img .slick-slider {
     margin-bottom: 0px;
+}
+
+.sliders-img .title-general {
+    margin: 10px;
 }
