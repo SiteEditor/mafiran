@@ -24,7 +24,7 @@
                             $is = $i < 10 ? "0" . $i : $i;
                             ?>
 
-                            <li><a href="#mafiran-service-tab-<?php echo $term->term_id; ?>"><?php echo $term->name . "    " . $is; ?></a></li>
+                            <li><a href="#mafiran-service-tab-<?php echo $term->term_id; ?>"><?php echo $term->name . "&ensp;&ensp;" . $is; ?></a></li>
 
                             <?php
                             $i++;
