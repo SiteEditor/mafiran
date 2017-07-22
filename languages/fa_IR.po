@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-22 13:40+0430\n"
-"PO-Revision-Date: 2017-07-22 13:40+0430\n"
+"POT-Creation-Date: 2017-07-22 18:53+0430\n"
+"PO-Revision-Date: 2017-07-22 18:54+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -19,25 +19,37 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive-product.php:30
+#: archive-product.php:55
 msgid "Products"
 msgstr "محصولات"
 
-#: archive-product.php:107 archive-project.php:81 archive-service.php:89
+#: archive-product.php:139 archive-project.php:81 archive-service.php:98
 msgid "Previous page"
 msgstr "صفحه قبلی"
 
-#: archive-product.php:108 archive-project.php:82 archive-service.php:90
+#: archive-product.php:140 archive-project.php:82 archive-service.php:99
 msgid "Next page"
 msgstr "صفحه بعدی"
 
-#: archive-product.php:109 archive-project.php:83 archive-service.php:91
+#: archive-product.php:141 archive-project.php:83 archive-service.php:100
 msgid "Page"
 msgstr "برگه"
 
-#: archive-service.php:63
+#: archive-service.php:72
 msgid "Pages:"
 msgstr ""
+
+#: functions.php:129
+msgid "Product Archive Description"
+msgstr ""
+
+#: single-product.php:82
+msgid "Short Description"
+msgstr "توضیحات کوتاه"
+
+#: single-product.php:97
+msgid "Description"
+msgstr "توضیحات"
 
 #: single-project.php:60
 msgid "Employer:"
