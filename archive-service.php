@@ -14,9 +14,9 @@
 
                         <div class="header-wrap text-center">
 
-                            <header class="header-wrap-inner">
+                            <header class="sed-row-boxed">
 
-                                <h2 class="title-wrap"> <?php the_title(); ?> </h2>
+                                <h4 class="title-wrap"> <?php the_title(); ?> </h4>
 
                                 <div class="service-desc">
 
@@ -42,27 +42,35 @@
                                     <i class="fa fa-chevron-down"></i>
                                 </div>
 
-                            </header><!-- .entry-header -->
+                            </header>
 
                         </div>
-                        <!-- .post-thumbnail -->
+
 
                         <div class="content-wrap text-center">
 
-                            <?php
+                            <div class="sed-row-boxed">
 
-                            the_content();
+                                <?php
 
-                            wp_link_pages( array(
-                                'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-                                'after'       => '</div>',
-                                'link_before' => '<span class="page-number">',
-                                'link_after'  => '</span>',
-                            ) );
+                                the_content();
 
-                            ?>
+                                wp_link_pages( array(
+                                    'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+                                    'after'       => '</div>',
+                                    'link_before' => '<span class="page-number">',
+                                    'link_after'  => '</span>',
+                                ) );
 
-                        </div><!-- .entry-content -->
+                                ?>
+
+                                <div class="read-more-back">
+                                    <i class="fa fa-chevron-up"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                         <?php
 
