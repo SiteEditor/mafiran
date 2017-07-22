@@ -47,7 +47,11 @@
 
                                         $post_content = get_the_excerpt();
 
+                                        $post_content = apply_filters( 'the_excerpt' , $post_content );
+
                                         $excerpt_length = 90;
+
+                                        $post_content = strip_tags( $post_content );
 
                                         if( strlen( $post_content ) > $excerpt_length ){
 

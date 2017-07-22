@@ -162,8 +162,15 @@
         });*/
 
         $( ".archive-service-post-type .mafiran-services-inner" ).accordion({
-            heightStyle: "content" ,
-            collapsible: true 
+            heightStyle : "content" ,
+            collapsible : true ,
+            active      : false
+        });
+
+        $(".archive-service-post-type .mafiran-services-inner .read-more-back").on("click" , function(){
+
+            $( ".archive-service-post-type .mafiran-services-inner" ).accordion( "option" , "active" , false );
+
         });
 
 

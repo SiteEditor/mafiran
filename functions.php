@@ -41,7 +41,24 @@ function sed_mafiran_theme_setup() {
 
     load_child_theme_textdomain( 'mafiran', get_stylesheet_directory() . '/languages' );
 
+    remove_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
+
 }
+
+function mafiran_excerpt_more( $link ) {
+    if ( is_admin() ) {
+        return $link;
+    }
+
+    return ' &hellip; ';
+}
+add_filter( 'excerpt_more', 'mafiran_excerpt_more' );
+
+function mafiran_excerpt_length( $length ) {
+    return 650;
+}
+
+add_filter( 'excerpt_length', 'mafiran_excerpt_length', 999 );
 
 /**
  * Add Site Editor Modules
