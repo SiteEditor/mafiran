@@ -49,10 +49,10 @@
 
                                         ?>
 
-                                    </div>
+                                        <div class="read-more">
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
 
-                                    <div class="read-more">
-                                        <i class="fa fa-angle-down"></i>
                                     </div>
 
                                 </header>
