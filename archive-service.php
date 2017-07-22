@@ -14,11 +14,11 @@
 
                         <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 
-                            <div class="post-thumbnail sed-archive-featured-image">
+                            <div class="header-wrap text-center">
 
-                                <header class="entry-header">
+                                <header class="header-wrap-inner">
 
-                                    <h2 class="entry-title"> <?php the_title(); ?> </h2>
+                                    <h2 class="title-wrap"> <?php the_title(); ?> </h2>
 
                                     <div class="service-desc">
 
@@ -40,16 +40,16 @@
 
                                     </div>
 
-                                    <span class="read-more">
+                                    <div class="read-more">
                                         <i class="fa fa-chevron-down"></i>
-			                        </span>
+			                        </div>
 
                                 </header><!-- .entry-header -->
 
                             </div>
                             <!-- .post-thumbnail -->
 
-                            <div class="entry-content">
+                            <div class="content-wrap text-center">
 
                                 <?php
 
