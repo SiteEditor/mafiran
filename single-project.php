@@ -15,221 +15,173 @@ get_header(); ?>
 <div class="wrap">
     <div id="primary" class="content-area blog-content-area">
         <main id="main" class="site-main" role="main">
-            <section class="content">
-                <?php sed_iott_breadcrumbs(); ?>
 
-                <?php 
+            <?php
+            /* Start the Loop */
+            while ( have_posts() ) : the_post();
 
-                    /* Start the Loop */
-                while ( have_posts() ) : the_post();
-                    
+                $project_employer = get_post_meta( get_the_ID() , 'wpcf-project_employer' , true  );
+                $project_date = get_post_meta( get_the_ID() , 'wpcf-project_date' , true );
+                $project_description = get_post_meta( get_the_ID() , 'wpcf-project_description' , true );
 
-                    ?>  
+                $project_gallery_one = get_post_meta( get_the_ID() , 'wpcf-project_gallery_one' , false );
+                $project_gallery_two = get_post_meta( get_the_ID() , 'wpcf-project_gallery_two' , false );
+                $project_gallery_three = get_post_meta( get_the_ID() , 'wpcf-project_gallery_three' , false );
 
-                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                ?>
+
+                <div class="single-project">
+
+                    <div class="sliders-img">
+
                         <div class="row">
-                            <div class="col-md-4">
 
-                                <?php
-                                $product_gallery = iott_get_field( 'iott_product_gallery' );
+                            <div class="col-sm-3">
+                                <div class="single-content-container">
+                                    <div class="arrows-box">
 
-                                $product_gallery = is_string( $product_gallery ) && !empty( $product_gallery ) ? explode( "," , $product_gallery ) : $product_gallery;
+                                        <?php
+                                        $prev_post = get_previous_post();
+                                        if (!empty( $prev_post )): ?>
+                                            <a class="arrow previous" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>" title="<?php echo esc_attr( $prev_post->post_title ); ?>"><i class="fa fa-angle-left"></i></a>
+                                        <?php endif; ?>
 
-                                $product_gallery = is_array( $product_gallery ) ? $product_gallery : array();
+                                        <?php
+                                        $next_post = get_next_post();
+                                        if (!empty( $next_post )): ?>
+                                            <a class="arrow next" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_post->post_title ); ?>"><i class="fa fa-angle-right"></i></a>
+                                        <?php endif; ?>
+                                        
+                                    </div>
 
-                                if ( '' !== get_the_post_thumbnail() ){
-
-                                    $post_thumbnail_id = get_post_thumbnail_id( $post_id );
-
-                                    array_unshift( $product_gallery , $post_thumbnail_id );
-
-                                }
-
-                                $product_gallery = array_filter( $product_gallery , 'absint' );
-
-                                ?>
-
-                                <div class="single-product-thumbnails-slider">
-                                    <div class="slider-wrap">
-                                        <div class="carousel">
-
-                                            <?php
-                                            if( !empty( $product_gallery ) ) {
-                                                foreach ($product_gallery AS $attach_id ) {
-
-                                                    $img = get_sed_attachment_image_html( $attach_id , "large" );
-
-                                                    if ( ! $img ) {
-                                                        $img = array();
-                                                        $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
-                                                    }
-
-                                                    ?>
-
-                                                    <div class="item">
-                                                        <?php echo $img['thumbnail'];?>
-                                                    </div>
-
-                                                    <?php
-
-                                                }
-                                            }
-                                            ?>
-
+                                    <div class="content-inner">
+                                        <div class="title">
+                                            <h4><?php the_title(); ?></h4>
+                                            <strong><?php echo __( 'Employer:' , 'mafiran' ). " " . apply_filters( 'the_title' , $project_employer );?></strong>
+                                            <div class="date"><?php echo __( 'Date:' , 'mafiran' ). " " . apply_filters( 'the_title' , $project_date );?></div>
                                         </div>
+                                        <div class="spr-general"></div>
+                                        <div class="desc"><?php echo apply_filters( 'the_content' , $project_description );?></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <div class="content-container">
+                                    <div class="content-inner">
+                                        <!--<div class="title"><h3>Ah oui…</h3></div> -->
+                                        <div class="desc"><?php the_content();?></div>
+                                        <div class="spr-general"></div>
                                     </div>
                                 </div>
 
-                                <div class="single-product-nav-slider">
-                                    <div class="slider-wrap">
-                                        <div class="carousel">
+                                <div class="slide-container slide-first sed-mafiran-slider" data-pause="no" data-slider-nav=".sed-mafiran-slider.slide-second">
 
-                                            <?php
-                                            if( !empty( $product_gallery ) ) {
-                                                foreach ($product_gallery AS $attach_id ) {
+                                    <?php
 
-                                                    $img = get_sed_attachment_image_html( $attach_id , "thumbnail" );
+                                    foreach ( $project_gallery_one As $image_url ) {
 
-                                                    if ( ! $img ) {
-                                                        $img = array();
-                                                        $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
-                                                    }
+                                        $attachment_id = mafiran_get_attachment_id_by_url( $image_url );
 
-                                                    ?>
+                                        $img = get_sed_attachment_image_html( $attachment_id , '' , '640X640' );
 
-                                                    <div class="item">
-                                                        <?php echo $img['thumbnail'];?>
-                                                    </div>
+                                        if ( ! $img ) {
+                                            $img = array();
+                                            $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
+                                        }
 
-                                                    <?php
-
-                                                }
-                                            }
-                                            ?>
-
+                                        ?>
+                                        <div class="slide-item">
+                                            <?php echo $img['thumbnail'];?>
                                         </div>
-                                    </div>
+                                        <?php
+
+                                    }
+                                    ?>
+
+
                                 </div>
 
                             </div>
 
-                            <div class="col-md-8">
-                                <header class="entry-header">
-                                    <h3>
-                                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                            <span><?php the_title(); ?></span>
-                                            <small><?php iott_the_field('subtitle'); ?></small>
-                                        </a>
-                                    </h3>
+                            <div class="clear"></div>
 
-                                    <?php $str = get_terms_string(get_the_ID(), 'product_category', 'دسته: ', ' '); ?>
-                                    <?php $term = get_the_terms(get_the_ID(), 'product_category')[0]->term_id; ?>
-                                    <div class="meta">
-                                        <?php echo $str; the_tags("برچسب‌ها: ", "، "); ?>
-                                    </div>
-                                </header>
+                            <div class="clear"></div>
 
-                                <section class="entry-content">
-                                    <h3 class="sectionTitle">توضیحات محصول:</h3>
+                            <div class="col-sm-3">
+                                <div class="slide-container slide-second slide-thumb sed-mafiran-slider" data-pause="no" data-slider-nav=".sed-mafiran-slider.slide-first">
 
-                                    <div class="entry">
-                                        <?php the_content(); ?>
-                                        <?php echo do_shortcode("[apss_share]"); ?>
-                                    </div>
+                                    <?php
 
-                                    <?php if (iott_get_field('link_video')) { ?>
-                                    <div class="watchVideo">
-                                        <a href="<?php iott_the_field('link_video'); ?>" class="fancybox" data-fancybox-type="iframe">مشاهده ویدیو</a>
-                                    </div>
-                                    <?php } ?>
-                                </section>
+                                    foreach ( $project_gallery_two As $image_url ) {
+
+                                        $attachment_id = mafiran_get_attachment_id_by_url( $image_url );
+
+                                        $img = get_sed_attachment_image_html( $attachment_id , '' , '320X320' );
+
+                                        if ( ! $img ) {
+                                            $img = array();
+                                            $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
+                                        }
+
+                                        ?>
+                                        <div class="slide-item">
+                                            <?php echo $img['thumbnail'];?>
+                                        </div>
+                                        <?php
+
+                                    }
+                                    ?>
+
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <?php
-                    endwhile; // End of the loop.
-                ?>
 
-                <?php
-                $related_products = (array)iott_get_field( 'related_products' ); 
-                $related_products = array_filter( $related_products );
-               
-                if( !empty( $related_products ) ){
-                ?>
-                <section class="productSections relatedProducts">
-                    <h4 class="sectionTitle"><span>محصولات مرتبط</span></h4>
-
-                    <div class="slider-wrap">
-                        <div class="carousel">
-                            <?php
-                            $args = array(
-                                'post_type' => 'product',
-                                //'showposts' => 18,
-                                'post__in'  => $related_products,
-                                'orderby'   => 'post__in'
-                            );
-                            ?>
-                            <?php query_posts($args); while (have_posts()) : the_post(); ?>
-                            <div class="item">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                    <?php if ('' !== get_the_post_thumbnail() && !is_single()) : ?>
-                                        <?php the_post_thumbnail('s1x1'); ?>
-                                    <?php endif; ?>
-
-                                    <div class="caption">
-                                        <h5><?php the_title(); ?><hr class="little-separator" /><span><?php iott_the_field('subtitle'); ?></span></h5>
-                                        <p><?php the_excerpt(); ?></p>
-                                    </div>
-                                </a>
+                            <div class="col-sm-6 text-left">
+                                <div class="arrows-box">
+                                    <a class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></a>
+                                    <a class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></a>
+                                </div>
                             </div>
-                            <?php endwhile; wp_reset_query(); ?>
+
+                            <div class="col-sm-3">
+                                <div class="slide-container slide-third slide-thumb sed-mafiran-slider" data-pause="no">
+                                    <?php
+
+                                    foreach ( $project_gallery_three As $image_url ) {
+
+                                        $attachment_id = mafiran_get_attachment_id_by_url( $image_url );
+
+                                        $img = get_sed_attachment_image_html( $attachment_id , '' , '320X320' );
+
+                                        if ( ! $img ) {
+                                            $img = array();
+                                            $img['thumbnail'] = '<img class="sed-image-placeholder sed-image" src="' . sed_placeholder_img_src() . '" />';
+                                        }
+
+                                        ?>
+                                        <div class="slide-item">
+                                            <?php echo $img['thumbnail'];?>
+                                        </div>
+                                        <?php
+
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
-                </section>
-                <?php } 
 
-                $suggestion_products = (array)iott_get_field( 'suggestion_products' );
-                $suggestion_products = array_filter( $suggestion_products );
+                </div>
 
-                if( !empty( $suggestion_products ) ){
-                ?>
+            <?php
 
-                <section class="productSections selectedProducts">
-                    <h4 class="sectionTitle"><span>محصولات پیشنهادی</span></h4>
+            endwhile; // End of the loop.
+            ?>
 
-                    <?php
-                    
-
-                    $args = array(
-                        'post_type' => 'product',
-                        //'showposts' => 18,
-                        'post__in'  => $suggestion_products,
-                        'orderby'   => 'post__in'
-                    );
-                    ?>
-                    <div class="slider-wrap">
-                        <div class="carousel" data-flickity='{"percentPosition": false, "rightToLeft": true, "cellAlign": "right", "autoPlay": 15000, "groupCells": true }'> <!-- "contain": true, "wrapAround": true, -->
-                            <?php query_posts( $args ); while (have_posts()) : the_post(); ?>
-                            <div class="item">
-                                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                    <?php if ('' !== get_the_post_thumbnail() && !is_single()) : ?>
-                                        <?php the_post_thumbnail('s1x1'); ?>
-                                    <?php endif; ?>
-
-                                    <div class="caption">
-                                        <h5><?php the_title(); ?><hr class="little-separator" /><span><?php iott_the_field('subtitle'); ?></span></h5>
-                                        <p><?php the_excerpt(); ?></p>
-                                    </div>
-                                </a>
-                            </div>
-                            <?php endwhile; wp_reset_query(); ?>
-                        </div>
-                    </div>
-                </section>
-
-                <?php } ?>
-
-            </section>
         </main><!-- #main -->
     </div><!-- #primary -->
     <?php get_sidebar(); ?>

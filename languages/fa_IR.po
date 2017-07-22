@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-21 18:17+0430\n"
-"PO-Revision-Date: 2017-07-21 18:18+0430\n"
+"POT-Creation-Date: 2017-07-22 10:26+0430\n"
+"PO-Revision-Date: 2017-07-22 10:26+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -18,6 +18,26 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive-project.php:77
+msgid "Previous page"
+msgstr "صفحه قبلی"
+
+#: archive-project.php:78
+msgid "Next page"
+msgstr "صفحه بعدی"
+
+#: archive-project.php:79
+msgid "Page"
+msgstr "برگه"
+
+#: single-project.php:50
+msgid "Employer:"
+msgstr "کارفرما:"
+
+#: single-project.php:51
+msgid "Date:"
+msgstr "تاریخ:"
 
 #: site-editor/modules/mafiran-products/mafiran-products.php:22
 #: site-editor/modules/mafiran-products/mafiran-products.php:106
@@ -135,30 +155,15 @@ msgstr ""
 msgid "Change skin"
 msgstr ""
 
-#: site-editor/modules/posts/skins/default/sed_posts.php:41
-#: site-editor/modules/posts/skins/skin1/sed_posts.php:85
-#: site-editor/modules/posts/skins/skin2/sed_posts.php:42
-#: site-editor/modules/posts/skins/skin3/sed_posts.php:50
+#: site-editor/modules/posts/skins/default/sed_posts.php:47
 msgid "Not found result"
 msgstr ""
 
-#: site-editor/modules/posts/skins/skin1/sed_posts.php:58
-msgid "click here"
-msgstr "اینجا کلیک کنید"
+#~ msgid "click here"
+#~ msgstr "اینجا کلیک کنید"
 
-#: site-editor/modules/posts/skins/skin1/sed_posts.php:63
-#, php-format
-msgid "For more information %1$s click here %2$s"
-msgstr "برای کسب اطلاعات بیشتر، %1$s اینجا را کلیک کنید %2$s"
-
-#~ msgid "Page"
-#~ msgstr "برگه"
-
-#~ msgid "Previous page"
-#~ msgstr "صفحه قبلی"
-
-#~ msgid "Next page"
-#~ msgstr "صفحه بعدی"
+#~ msgid "For more information %1$s click here %2$s"
+#~ msgstr "برای کسب اطلاعات بیشتر، %1$s اینجا را کلیک کنید %2$s"
 
 #~ msgid "Product Catalog Download"
 #~ msgstr "دانلود کاتالوگ محصولات"
