@@ -167,12 +167,13 @@
             active      : false
         });
 
+        $( ".archive-service-tabs" ).tabs();
+
         $(".archive-service-post-type .mafiran-services-inner .read-more-back").on("click" , function(){
 
             $( ".archive-service-post-type .mafiran-services-inner" ).accordion( "option" , "active" , false );
 
         });
-
 
     });
 

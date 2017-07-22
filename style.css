@@ -1387,24 +1387,25 @@ Text Domain:   iott
 /*************************************/
 
 .archive-service-post-type .header-wrap {
-    padding: 30px 0;
-    margin: 0;
+    padding: 30px 0 0;
+    margin: 1px 0 0; 
+    cursor: pointer;   
 }
 
-.archive-service-post-type .read-more-back,
-.archive-service-post-type .read-more {
-    color: #55d861;
-    margin-top: 15px;
+.archive-service-post-type .header-wrap .title-wrap {
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 10px;
 }
 
 .archive-service-post-type .content-wrap {
     background-color: #3d3d3d;
-    color: #fff;
-    padding: 10px 0 30px;
+    color: #eee;
+    padding: 0 0 30px;
 }
 
 .archive-service-post-type .content-wrap * {
-    color: #fff;
+    color: #eee;
 }
 
 .archive-service-post-type .gallery-item {
@@ -1412,16 +1413,80 @@ Text Domain:   iott
     padding: 0 0.5em;
 }
 
-.archive-service-post-type .header-wrap.ui-accordion-header-active {
-    background-color: #3d3d3d;
-    padding-bottom: 5px;
-}
-.archive-service-post-type .header-wrap.ui-accordion-header-active .service-desc {
-    display: none;
+.archive-service-post-type .header-wrap,
+.archive-service-post-type .header-wrap * {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;    
 }
 
+.archive-service-post-type .header-wrap:hover,
+.archive-service-post-type .header-wrap:focus,
+.archive-service-post-type .header-wrap:active,
+.archive-service-post-type .header-wrap.ui-accordion-header-active {
+    background-color: #3d3d3d;
+}
+
+.archive-service-post-type .header-wrap:hover *, 
+.archive-service-post-type .header-wrap:focus *,
+.archive-service-post-type .header-wrap:active *,
 .archive-service-post-type .header-wrap.ui-accordion-header-active * {
     color: #fff;
+}
+
+.archive-service-post-type .header-wrap .service-desc {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    height: auto;
+    overflow: hidden;
+}
+
+.archive-service-post-type .header-wrap.ui-accordion-header-active .service-desc {
+    height: 0;
+}
+
+.archive-service-post-type .header-wrap .read-more {
+    padding-bottom: 30px;
+}
+
+.archive-service-post-type .content-wrap .read-more-back,
+.archive-service-post-type .header-wrap .read-more {
+    color: #55d861;
+    margin-top: 10px;
+    font-size: 25px;
+    line-height: 20px;
+}
+
+.archive-service-post-type .content-wrap .read-more-back *,
+.archive-service-post-type .header-wrap .read-more * {
+    color: #55d861;
+    cursor: pointer;
+}
+
+
+/***********************************/
+
+.archive-service-tabs ul {
+    list-style-type: none;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.archive-service-tabs ul li {
+    display: inline-block;
+    margin: 0 5px;
+    border: 2px solid transparent;
+    border-top: none;
+    padding: 15px 20px;
+}
+
+.archive-service-tabs ul li.ui-tabs-active {
+    border-color: #55d861;
 }
 
 
