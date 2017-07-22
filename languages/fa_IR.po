@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-22 10:26+0430\n"
-"PO-Revision-Date: 2017-07-22 10:26+0430\n"
+"POT-Creation-Date: 2017-07-22 13:40+0430\n"
+"PO-Revision-Date: 2017-07-22 13:40+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -19,23 +19,31 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive-project.php:77
+#: archive-product.php:30
+msgid "Products"
+msgstr "محصولات"
+
+#: archive-product.php:107 archive-project.php:81 archive-service.php:89
 msgid "Previous page"
 msgstr "صفحه قبلی"
 
-#: archive-project.php:78
+#: archive-product.php:108 archive-project.php:82 archive-service.php:90
 msgid "Next page"
 msgstr "صفحه بعدی"
 
-#: archive-project.php:79
+#: archive-product.php:109 archive-project.php:83 archive-service.php:91
 msgid "Page"
 msgstr "برگه"
 
-#: single-project.php:50
+#: archive-service.php:63
+msgid "Pages:"
+msgstr ""
+
+#: single-project.php:60
 msgid "Employer:"
 msgstr "کارفرما:"
 
-#: single-project.php:51
+#: single-project.php:61
 msgid "Date:"
 msgstr "تاریخ:"
 
@@ -158,6 +166,9 @@ msgstr ""
 #: site-editor/modules/posts/skins/default/sed_posts.php:47
 msgid "Not found result"
 msgstr ""
+
+#~ msgid "Products:"
+#~ msgstr "محصولات"
 
 #~ msgid "click here"
 #~ msgstr "اینجا کلیک کنید"

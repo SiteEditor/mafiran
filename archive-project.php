@@ -1,6 +1,6 @@
 <div class="wrap">
 
-    <div id="primary" class="content-area archive-custom-post-type">
+    <div id="primary" class="content-area archive-custom-post-type archive-project-post-type">
         <main id="main" class="site-main" role="main">
 
 

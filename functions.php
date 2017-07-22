@@ -122,6 +122,24 @@ function mafiran_get_attachment_id_by_url( $url ) {
     return $attachment_id;
 }
 
+function mafiran_register_theme_fields( $fields ){
+
+    $fields['products_archive_description'] = array(
+        'type'              => 'textarea',
+        'label'             => __('Product Archive Description', 'site-editor'),
+        //'description'       => '',
+        'transport'         => 'postMessage' ,
+        'setting_id'        => 'mafiran_products_archive_description',
+        'default'           => '',
+        "panel"             => "general_settings" ,
+    );
+
+    return $fields;
+
+}
+
+add_filter( "sed_theme_options_fields_filter" , 'mafiran_register_theme_fields' , 10000 );
+
 
 
 
