@@ -51,7 +51,7 @@ get_header(); ?>
                                         if (!empty( $next_post )): ?>
                                             <a class="arrow next" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>" title="<?php echo esc_attr( $next_post->post_title ); ?>"><i class="fa fa-angle-right"></i></a>
                                         <?php endif; ?>
-                                        
+
                                     </div>
 
                                     <div class="content-inner">
@@ -139,7 +139,7 @@ get_header(); ?>
                             </div>
 
                             <div class="col-sm-6 text-left">
-                                <div class="arrows-box">
+                                <div class="arrows-box mafiran-next-prev-controler">
                                     <a class="arrow previous" href="javascript:;"><i class="fa fa-angle-left"></i></a>
                                     <a class="arrow next" href="javascript:;"><i class="fa fa-angle-right"></i></a>
                                 </div>
