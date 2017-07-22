@@ -133,7 +133,7 @@
 
         });
 
-        $('.archive-service-post-type article.post .read-more').click(function( e ) {
+        /*$('.archive-service-post-type article.post .read-more').click(function( e ) {
 
             var elm_post           = $(this).parents('.post:first'),
                 elm_post_thumbnail = $(elm_post).children('.post-thumbnail'),
@@ -159,6 +159,11 @@
 
             $(this).toggleClass('open');
 
+        });*/
+
+        $( ".archive-service-post-type .mafiran-services-inner" ).accordion({
+            heightStyle: "content" ,
+            collapsible: true 
         });
 
 

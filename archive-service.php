@@ -5,69 +5,64 @@
 
             <?php
             if ( have_posts() ) : ?>
-
+                <div class="mafiran-services-inner">
                     <?php
                     /* Start the Loop */
                     while ( have_posts() ) : the_post();
 
                         ?>
 
-                        <article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+                        <div class="header-wrap text-center">
 
-                            <div class="header-wrap text-center">
+                            <header class="header-wrap-inner">
 
-                                <header class="header-wrap-inner">
+                                <h2 class="title-wrap"> <?php the_title(); ?> </h2>
 
-                                    <h2 class="title-wrap"> <?php the_title(); ?> </h2>
+                                <div class="service-desc">
 
-                                    <div class="service-desc">
+                                    <?php
 
-                                        <?php
+                                    $post_content = get_the_excerpt();
 
-                                        $post_content = get_the_excerpt();
+                                    $excerpt_length = 250;
 
-                                        $excerpt_length = 250;
+                                    if( strlen( $post_content ) > $excerpt_length ){
 
-                                        if( strlen( $post_content ) > $excerpt_length ){
+                                        $post_content = mb_substr( $post_content, 0, $excerpt_length ) . "...";
 
-                                            $post_content = mb_substr( $post_content, 0, $excerpt_length ) . "...";
+                                    }
 
-                                        }
+                                    echo $post_content;
 
-                                        echo $post_content;
+                                    ?>
 
-                                        ?>
+                                </div>
 
-                                    </div>
+                                <div class="read-more">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
 
-                                    <div class="read-more">
-                                        <i class="fa fa-chevron-down"></i>
-			                        </div>
+                            </header><!-- .entry-header -->
 
-                                </header><!-- .entry-header -->
+                        </div>
+                        <!-- .post-thumbnail -->
 
-                            </div>
-                            <!-- .post-thumbnail -->
+                        <div class="content-wrap text-center">
 
-                            <div class="content-wrap text-center">
+                            <?php
 
-                                <?php
+                            the_content();
 
-                                the_content();
+                            wp_link_pages( array(
+                                'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+                                'after'       => '</div>',
+                                'link_before' => '<span class="page-number">',
+                                'link_after'  => '</span>',
+                            ) );
 
-                                wp_link_pages( array(
-                                    'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
-                                    'after'       => '</div>',
-                                    'link_before' => '<span class="page-number">',
-                                    'link_after'  => '</span>',
-                                ) );
+                            ?>
 
-                                ?>
-
-                            </div><!-- .entry-content -->
-
-
-                        </article><!-- #post-## -->
+                        </div><!-- .entry-content -->
 
                         <?php
 
@@ -75,6 +70,7 @@
 
                     ?>
 
+                </div>
                 <?php
 
                 the_posts_pagination( array(
