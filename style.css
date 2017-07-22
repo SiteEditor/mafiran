@@ -1265,12 +1265,12 @@ Text Domain:   iott
     margin-top: 40px;
 }
 
-.sliders-img .single-content-container .content-inner {
+.single-project .sliders-img .single-content-container .content-inner {
     background-color: #e7e7e9;
-    padding: 50px 25px;
+    padding: 50px 25px 30px;
 }
 
-.sliders-img .single-content-container .arrows-box {
+.single-project .sliders-img .single-content-container .arrows-box {
     background-image: none;
     width: 160px;
     height: 100px;
@@ -1286,7 +1286,7 @@ Text Domain:   iott
     padding: 0;
 }
 
-.sliders-img .single-content-container .desc {
+.single-project .sliders-img .single-content-container .desc {
     text-align: justify;
 }
 
@@ -1296,14 +1296,89 @@ Text Domain:   iott
         margin-top: -180px;
     }
 
-    .sliders-img .single-content-container {
+    .single-project .sliders-img .single-content-container {
         margin: -80px 40px 0 0;
     }
 
-    .rtl .sliders-img .single-content-container {
+    .rtl .single-project .sliders-img .single-content-container {
         margin: -80px 0 0 40px;
     }
 
 }
 
 
+/**************************/
+
+.single-product .sliders-img .black-box {
+    min-height: 180px;
+}
+
+.single-product .sliders-img .single-content-container ,
+.single-product .sliders-img .content-container {
+    margin: 20px 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+
+    .single-product .slide-container.slide-third {
+        margin-top: -150px;
+    }
+
+    .single-product .sliders-img .single-content-container {
+        margin: 20px 40px 20px 0;
+    }
+
+    .rtl .single-product .sliders-img .single-content-container {
+        margin: 20px 0 20px 40px;
+    }
+
+    .single-product .sliders-img .content-container {
+        margin: 30px 0 30px 40px;
+    }
+
+    .rtl .single-product .sliders-img .content-container {
+        margin: 30px 40px 30px 0;
+    }
+
+}
+
+
+/**************************/
+
+.category-items ul {
+    list-style-type: none;
+    width: 70%;
+    display: block;
+    padding: 20px;
+    background-color: #3d3d3d;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto 0 0;
+    min-height: 200px;
+}
+
+.primary-box {
+    display: block;
+    width: 50%;
+    min-height: 100px;
+    background-color: #55d861;
+    margin: -40px 0 0 auto;
+}
+
+.category-items ul li {
+    margin-bottom: 10px;
+}
+
+.category-items ul li a {
+    color: #fff;
+    cursor: pointer;
+}
+
+.category-items ul li.active a,
+.category-items ul li a:active,
+.category-items ul li a:hover,
+.category-items ul li a:focus {
+    color: #55d861;
+}
