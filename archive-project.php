@@ -3,6 +3,10 @@
     <div id="primary" class="content-area archive-custom-post-type archive-project-post-type">
         <main id="main" class="site-main" role="main">
 
+            <header class="archive-project-header">
+                <div class="title"><h4><?php _e("Done Projects","mafiran");?></h4></div>
+                <div class="spr-general"></div>
+            </header>
 
             <?php
             if ( have_posts() ) : ?>

@@ -26,6 +26,8 @@
 
             $wooden_logs_gallery = get_term_meta( $wooden_logs->term_id , 'wpcf-product-category-images' , false );
 
+            $products_description = get_theme_mod( 'mafiran_home_page_products_description' , '' );
+
             ?>
 
             <div class="col-sm-11">
@@ -84,7 +86,7 @@
                             <div class="punchline">
                                 <div class="title"><h3><?php _e("Products...","mafiran");?></h3></div>
                                 <div class="spr-general"></div>
-                                <p class="desc"><?php echo esc_html( $content );?></p>
+                                <p class="desc"><?php echo $products_description;?></p>
                                 <div class="spr-general"></div>
                             </div>
                         </div>

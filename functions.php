@@ -134,6 +134,16 @@ function mafiran_register_theme_fields( $fields ){
         "panel"             => "general_settings" ,
     );
 
+    $fields['home_page_products_description'] = array(
+        'type'              => 'textarea',
+        'label'             => __('Home Page Product Description', 'site-editor'),
+        //'description'       => '',
+        'transport'         => 'postMessage' ,
+        'setting_id'        => 'mafiran_home_page_products_description',
+        'default'           => '',
+        "panel"             => "general_settings" ,
+    );
+
     return $fields;
 
 }

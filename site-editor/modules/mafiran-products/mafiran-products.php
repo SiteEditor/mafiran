@@ -66,13 +66,13 @@ class PBMafiranProductsShortcode extends PBShortcodeClass{
 
         $params = array();
 
-        $params['sed_shortcode_content'] = array(
+        /*$params['sed_shortcode_content'] = array(
             "label"             => __("Product Description", "site-editor"),
             'type'              => 'textarea',
             'priority'          => 10,
             'default'           => "",
             "panel"             => "mafiran_products_settings_panel",
-        );
+        );*/
 
         $params['animation'] =  array(
             "type"                => "animation" ,

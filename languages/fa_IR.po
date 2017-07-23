@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-22 18:53+0430\n"
-"PO-Revision-Date: 2017-07-22 18:54+0430\n"
+"POT-Creation-Date: 2017-07-23 13:18+0430\n"
+"PO-Revision-Date: 2017-07-23 13:18+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -23,24 +23,32 @@ msgstr ""
 msgid "Products"
 msgstr "محصولات"
 
-#: archive-product.php:139 archive-project.php:81 archive-service.php:98
+#: archive-product.php:139 archive-project.php:85 archive-service.php:156
 msgid "Previous page"
 msgstr "صفحه قبلی"
 
-#: archive-product.php:140 archive-project.php:82 archive-service.php:99
+#: archive-product.php:140 archive-project.php:86 archive-service.php:157
 msgid "Next page"
 msgstr "صفحه بعدی"
 
-#: archive-product.php:141 archive-project.php:83 archive-service.php:100
+#: archive-product.php:141 archive-project.php:87 archive-service.php:158
 msgid "Page"
 msgstr "برگه"
 
-#: archive-service.php:72
+#: archive-project.php:7
+msgid "Done Projects"
+msgstr "پروژه های انجام شده"
+
+#: archive-service.php:129
 msgid "Pages:"
 msgstr ""
 
 #: functions.php:129
 msgid "Product Archive Description"
+msgstr ""
+
+#: functions.php:139
+msgid "Home Page Product Description"
 msgstr ""
 
 #: single-product.php:82
@@ -73,20 +81,6 @@ msgstr ""
 msgid "Mafiran Products Settings"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:71
-msgid "Product Description"
-msgstr ""
-
-#: site-editor/modules/mafiran-products/mafiran-products.php:72
-#: site-editor/modules/posts/posts.php:130
-msgid "Module Title"
-msgstr ""
-
-#: site-editor/modules/mafiran-products/mafiran-products.php:73
-#: site-editor/modules/posts/posts.php:131
-msgid "Enter Module Title"
-msgstr ""
-
 #: site-editor/modules/mafiran-products/mafiran-products.php:79
 #: site-editor/modules/posts/posts.php:270
 msgid "Animation Settings"
@@ -97,7 +91,7 @@ msgstr ""
 msgid "Module Wrapper Settings"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/skins/default/sed_mafiran_products.php:85
+#: site-editor/modules/mafiran-products/skins/default/sed_mafiran_products.php:87
 msgid "Products..."
 msgstr "محصولات..."
 
@@ -129,6 +123,14 @@ msgstr ""
 
 #: site-editor/modules/posts/posts.php:129
 msgid "Title"
+msgstr ""
+
+#: site-editor/modules/posts/posts.php:130
+msgid "Module Title"
+msgstr ""
+
+#: site-editor/modules/posts/posts.php:131
+msgid "Enter Module Title"
 msgstr ""
 
 #: site-editor/modules/posts/posts.php:156
