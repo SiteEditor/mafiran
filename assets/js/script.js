@@ -167,7 +167,11 @@
             active      : false
         });
 
-        $( ".archive-service-tabs" ).tabs();
+        if( !$("body").hasClass("siteeditor-app") ) {
+
+            $(".archive-service-tabs").tabs();
+
+        }
 
         $(".archive-service-post-type .mafiran-services-inner .read-more-back").on("click" , function(){
 

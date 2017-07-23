@@ -50,7 +50,7 @@ get_header(); ?>
 
                                     <?php
 
-                                    $img = get_sed_attachment_image_html( $product_image_first , "" , "800X800" );
+                                    $img = get_sed_attachment_image_html( $product_image_first , "" , "800X600" );
 
                                     if ( ! $img ) {
                                         $img = array();
@@ -107,7 +107,7 @@ get_header(); ?>
                                 <div class="slide-container slide-second">
                                     <?php
 
-                                    $img = get_sed_attachment_image_html( $product_image_second , "" , "374X374" );
+                                    $img = get_sed_attachment_image_html( $product_image_second , "" , "300X300" );
 
                                     if ( ! $img ) {
                                         $img = array();
@@ -139,7 +139,7 @@ get_header(); ?>
                                 <div class="slide-container slide-third">
                                     <?php
 
-                                    $img = get_sed_attachment_image_html( $product_image_third , "" , "560X560" );
+                                    $img = get_sed_attachment_image_html( $product_image_third , "" , "400X400" );
 
                                     if ( ! $img ) {
                                         $img = array();

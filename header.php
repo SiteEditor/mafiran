@@ -33,16 +33,23 @@
 	</div>
 </div>
 
-<div class="intro-wrap">
-	<div class="intro-wrap-inner">
-		<div class="intro-logo-wrap">
-			<img src="http://localhost/mafir/wp-content/uploads/2017/07/logo-intru.png" class="intro-logo"> 
-		</div> 
-		<div class="intro-language">
-			<a class="active-language">FA</a>|<a>EN</a>
+<?php
+if( is_front_page() && !site_editor_app_on() ) {
+	?>
+	<div class="intro-wrap">
+		<div class="intro-wrap-inner">
+			<div class="intro-logo-wrap">
+				<img src="http://localhost/mafir/wp-content/uploads/2017/07/logo-intru.png" class="intro-logo">
+			</div>
+			<div class="intro-language">
+				<a class="active-language">FA</a>|<a>EN</a>
+			</div>
 		</div>
-	</div> 
-</div>
+	</div>
+	<?php
+}
+
+?>
 
 
 <div id="page" class="site">
