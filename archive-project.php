@@ -31,14 +31,14 @@ get_header(); ?>
             <?php
             if ( have_posts() ) : ?>
 
-                <div class="row">
+                <div class="row carchive-inner-content-container">
                     <?php
                     /* Start the Loop */
                     while ( have_posts() ) : the_post();
 
                         ?>
 
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 carchive-post-item">
                             <article id="post-<?php the_ID(); ?>" <?php post_class('post custom-post-item'); ?>>
                                 <?php if ('' !== get_the_post_thumbnail() && !is_single()) : ?>
                                     <div class="post-thumbnail">
@@ -118,4 +118,4 @@ get_header(); ?>
     <?php get_sidebar(); ?>
 </div><!-- .wrap -->
 
-<?php get_footer(); 
+<?php get_footer();

@@ -155,11 +155,72 @@ function mafiran_register_theme_fields( $fields ){
         "panel"             => "general_settings" ,
     );
 
+    $locale = get_locale();
+
+    if( $locale == 'fa_IR' ) {
+
+        $fields['english_site_url'] = array(
+            'type' => 'text',
+            'label' => __('English Site Url', 'site-editor'),
+            //'description'       => '',
+            'transport' => 'postMessage',
+            'setting_id' => 'mafiran_english_site_url',
+            'default' => 'http://eng.mafiran.com',
+            "panel" => "general_settings",
+        );
+
+    }
+
     return $fields;
 
 }
 
 add_filter( "sed_theme_options_fields_filter" , 'mafiran_register_theme_fields' , 10000 );
+
+function mafiran_user_intro_class( $classes ){
+
+    if(is_front_page() && !is_home()){
+        $classes[] = 'has-intro';
+    }
+
+    return $classes;
+}
+
+
+if( !isset($_COOKIE['mafiran_user_intro']) ){
+    setcookie("mafiran_user_intro", "start", time()+3600);
+    add_filter( 'body_class' , 'mafiran_user_intro_class' );
+}
+
+add_action( 'pre_get_posts', 'mafiran_per_page_query' );
+/**
+ * Customize category query using pre_get_posts.
+ *
+ * @author     FAT Media <http://youneedfat.com>
+ * @copyright  Copyright (c) 2013, FAT Media, LLC
+ * @license    GPL-2.0+
+ * @todo       Change prefix to theme or plugin prefix
+ *
+ */
+function mafiran_per_page_query( $query ) {
+
+    $taxonomy = is_tax() ? get_queried_object()->taxonomy:"";
+
+    $is_taxonomy = in_array( $taxonomy , array( 'product-category'  ) );
+
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_taxonomy  ) {
+        $query->set( 'posts_per_page', '6' ); //Change this number to anything you like.
+    }
+
+    $post_type = $query->get('post_type');
+
+    $is_post_type = in_array( $post_type , array( 'product' , 'project' ) );
+
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_post_type && is_post_type_archive() ) {
+        $query->set( 'posts_per_page', '6' ); //Change this number to anything you like.
+    }
+
+}
 
 
 

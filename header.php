@@ -33,7 +33,10 @@
 	</div>
 </div>
 
-<?php
+<?php 
+
+$locale = get_locale();
+
 if( is_front_page() && !site_editor_app_on() ) {
 	?>
 	<div class="intro-wrap">
@@ -42,7 +45,26 @@ if( is_front_page() && !site_editor_app_on() ) {
 				<img src="http://localhost/mafir/wp-content/uploads/2017/07/logo-intru.png" class="intro-logo">
 			</div>
 			<div class="intro-language">
-				<a class="active-language">FA</a>|<a>EN</a>
+				<?php
+				if( $locale == 'fa_IR' ) {
+
+					$english_site_url = get_theme_mod( 'mafiran_english_site_url' , 'http://eng.mafiran.com' );
+
+					$english_site_url = esc_url( $english_site_url );
+
+					?>
+					<a class="active-language">FA</a>|<a href="<?php echo esc_attr( $english_site_url );?>">EN</a>
+					<?php
+				}else{
+
+					$main_site_url = 'http://www.mafiran.com';
+
+					?>
+					<a class="active-language">EN</a>|<a href="<?php echo esc_attr( $main_site_url );?>">FA</a>
+					<?php
+
+				}
+				?>
 			</div>
 		</div>
 	</div>
