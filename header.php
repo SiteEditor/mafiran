@@ -33,16 +33,26 @@
 	</div>
 </div>
 
-<?php 
+<?php
 
 $locale = get_locale();
 
 if( is_front_page() && !site_editor_app_on() ) {
+
+
+	$mafiran_intro_logo = get_theme_mod( 'mafiran_intro_logo' , '' );
+
+	$logo_url = wp_get_attachment_url( $mafiran_intro_logo );
+
 	?>
 	<div class="intro-wrap">
 		<div class="intro-wrap-inner">
 			<div class="intro-logo-wrap">
-				<img src="http://localhost/mafir/wp-content/uploads/2017/07/logo-intru.png" class="intro-logo">
+
+				<?php if( $logo_url ) { ?>
+					<img src="<?php echo esc_attr( esc_url( $logo_url ) );?>" class="intro-logo">
+				<?php } ?>
+
 			</div>
 			<div class="intro-language">
 				<?php

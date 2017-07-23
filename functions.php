@@ -171,6 +171,16 @@ function mafiran_register_theme_fields( $fields ){
 
     }
 
+    $fields[ 'intro_logo' ] = array(
+        'setting_id'        => 'mafiran_intro_logo',
+        'label'             => __('Intro Logo', 'translation_domain'),
+        'type'              => 'image',
+        //'priority'          => 10,
+        'default'           => '',
+        'transport'         => 'postMessage' ,
+        'panel'             =>  'general_settings'
+    );
+
     return $fields;
 
 }
