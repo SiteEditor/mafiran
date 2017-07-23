@@ -175,6 +175,43 @@
 
         });
 
+        var mGallery = window.masterslider_instances[0];
+
+        $(".next-gallery-slide").on("click" , function(){
+
+            mGallery.api.next();
+
+        });
+
+        var _addTumbCount = function(){
+
+            // dispatches when the slider's current slide change ends.
+            var cIndex = mGallery.api.index(),         // returns current slider index.
+                numS = mGallery.api.count();
+
+            cIndex += 1;
+
+            cIndex = cIndex < 10 ? "0" + cIndex : cIndex;
+
+            numS = numS < 10 ? "0" + numS : numS;
+
+            //console.log( mGallery.api.view.currentSlide );
+
+            $(".ms-thumb-frame-selected .ms-thumb-ol").html( "<span class='fa fa-angle-left'></span><span class='mafiran-thumb-num-count'>" + cIndex + "/" + numS + "</span>" );
+        };
+
+        mGallery.api.addEventListener( MSSliderEvent.CHANGE_END , function(){
+
+            _addTumbCount();
+
+        });
+
+        mGallery.api.addEventListener( MSSliderEvent.INIT , function(){
+
+            _addTumbCount();
+
+        });
+
     });
 
 
