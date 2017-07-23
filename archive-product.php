@@ -54,7 +54,7 @@
 
                                 <div class="title"> <h4><?php echo __( 'Products' , 'mafiran' ); ?></h4> </div>
 
-                                <div class="desc"><?php echo apply_filters( 'the_content' , $products_description );?></div>
+                                <div class="desc"><?php echo apply_filters( 'mafiran_short_description' , $products_description );?></div>
 
                                 <div class="spr-general"></div>
 

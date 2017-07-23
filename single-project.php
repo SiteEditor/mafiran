@@ -61,7 +61,7 @@ get_header(); ?>
                                             <div class="date"><?php echo __( 'Date:' , 'mafiran' ). " " . apply_filters( 'the_title' , $project_date );?></div>
                                         </div>
                                         <div class="spr-general"></div>
-                                        <div class="desc"><?php echo apply_filters( 'the_content' , $project_description );?></div>
+                                        <div class="desc"><?php echo apply_filters( 'mafiran_short_description' , $project_description );?></div>
                                     </div>
 
                                 </div>

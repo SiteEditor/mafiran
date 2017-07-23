@@ -32,7 +32,7 @@ class PBMafiranProductsShortcode extends PBShortcodeClass{
     function get_atts(){
 
         $atts = array(
-            "product_description"                   => ''
+            //"product_description"                   => ''
         );
 
         return $atts;

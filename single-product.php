@@ -80,7 +80,7 @@ get_header(); ?>
 
                                     <div class="content-inner">
                                         <div class="title"><h5><?php _e("Short Description" , "mafiran"); ?></h5></div>
-                                        <div class="desc"><?php echo apply_filters( 'the_content' , $product_description ); ?></div>
+                                        <div class="desc"><?php echo apply_filters( 'mafiran_short_description' , $product_description ); ?></div>
                                         <div class="spr-general"></div>
                                     </div>
                                 </div>

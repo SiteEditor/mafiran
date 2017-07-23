@@ -43,6 +43,17 @@ function sed_mafiran_theme_setup() {
 
     remove_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
 
+    /**
+     * Short Description (excerpt).
+     */
+    add_filter( 'mafiran_short_description', 'wptexturize' );
+    add_filter( 'mafiran_short_description', 'convert_smilies' );
+    add_filter( 'mafiran_short_description', 'convert_chars' );
+    add_filter( 'mafiran_short_description', 'wpautop' );
+    add_filter( 'mafiran_short_description', 'shortcode_unautop' );
+    add_filter( 'mafiran_short_description', 'prepend_attachment' );
+    add_filter( 'mafiran_short_description', 'do_shortcode', 11 ); // AFTER wpautop()
+
 }
 
 function mafiran_excerpt_more( $link ) {

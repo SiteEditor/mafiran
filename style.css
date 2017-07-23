@@ -803,7 +803,7 @@ Text Domain:   iott
 /*****************************/
 
 .archive-custom-post-type .row {
-    margin: -45px;
+    margin: 0 -45px;
 }
 
 .archive-custom-post-type .post {
