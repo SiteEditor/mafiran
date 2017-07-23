@@ -1592,3 +1592,124 @@ Text Domain:   iott
     -o-transition: all 0.6s ease 1s;
     transition: all 0.6s ease 1s;
 }
+
+/************************/
+
+.intro-wrap {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3d3d3d;
+    color: #fff;
+    z-index: 2000000;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.intro-wrap .intro-wrap-inner {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%; 
+    padding: 0 2em;
+    text-align: center;
+}
+
+.intro-wrap .intro-logo-wrap {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 40px;
+}
+
+.intro-wrap .intro-language a {
+    color: #eee;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+
+body.remove-intro .intro-wrap {
+    width: 0;
+}
+
+body.remove-intro .intro-wrap .intro-wrap-inner {
+    display: none;
+}
+
+
+
+
+
+/**
+ *
+ * Loading 
+ */
+
+.preloader {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 20000000;
+}
+
+.arc-rotate .loader {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: transparent;
+}
+
+.loader-container .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.arc-rotate .loader .arc { 
+    position: absolute;
+    border: 2px solid;
+    border-color: transparent #55d861 #55d861 #55d861;
+    border-radius: 50%;
+    margin: 32%;
+    width: 36%;
+    height: 36%;
+    -webkit-animation: single-arc-rotate 1s infinite linear;
+    animation: single-arc-rotate 1s infinite linear;
+}
+
+@-webkit-keyframes single-arc-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes single-arc-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

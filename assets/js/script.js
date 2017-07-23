@@ -225,4 +225,23 @@
     });
 
 
+
+    var removePreloader = function() {
+        setTimeout(function() {
+            jQuery('.preloader').hide();
+        }, 1500);
+    };
+
+    removePreloader();
+
+
+    var ActiveLanguage = function() {
+        $('.active-language').on( "click", function(){
+            $("body").addClass("remove-intro");
+        });
+    };
+
+    ActiveLanguage();      
+
+
 })(jQuery);
