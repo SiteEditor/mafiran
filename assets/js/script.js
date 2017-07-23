@@ -183,11 +183,11 @@
 
         });
 
-        var _addTumbCount = function(){
+        var _addTumbCount = function( cIndex ){
 
             // dispatches when the slider's current slide change ends.
-            var cIndex = mGallery.api.index(),         // returns current slider index.
-                numS = mGallery.api.count();
+            var numS = mGallery.api.count(),
+                index = cIndex;
 
             cIndex += 1;
 
@@ -197,18 +197,24 @@
 
             //console.log( mGallery.api.view.currentSlide );
 
-            $(".ms-thumb-frame-selected .ms-thumb-ol").html( "<span class='fa fa-angle-left'></span><span class='mafiran-thumb-num-count'>" + cIndex + "/" + numS + "</span>" );
+            $(".ms-thumbs-cont .ms-thumb-frame .ms-thumb-ol").eq(index).html( "<span class='mafiran-thumb-num-count'>" + cIndex + "/" + numS + "</span><span class='fa fa-angle-left'></span>" );
         };
 
-        mGallery.api.addEventListener( MSSliderEvent.CHANGE_END , function(){
+        /*mGallery.api.addEventListener( MSSliderEvent.CHANGE_START , function(){
 
-            _addTumbCount();
+            var cIndex = mGallery.api.index() + 1;
 
-        });
+            _addTumbCount( cIndex );
+
+        });*/
 
         mGallery.api.addEventListener( MSSliderEvent.INIT , function(){
 
-            _addTumbCount();
+            var numS = mGallery.api.count();
+
+            for (i = 0; i < numS; i++) {
+                _addTumbCount( i );
+            }
 
         });
 
