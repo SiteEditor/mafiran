@@ -84,7 +84,7 @@
                             <div class="punchline">
                                 <div class="title"><h3><?php _e("Products...","mafiran");?></h3></div>
                                 <div class="spr-general"></div>
-                                <p class="desc"><?php echo apply_filters( 'the_content' , $product_description );?></p>
+                                <p class="desc"><?php echo esc_html( $content );?></p>
                                 <div class="spr-general"></div>
                             </div>
                         </div>

@@ -175,48 +175,52 @@
 
         });
 
-        var mGallery = window.masterslider_instances[0];
+        if( typeof window.masterslider_instances != 'undefined' ) {
 
-        $(".next-gallery-slide").on("click" , function(){
+            var mGallery = window.masterslider_instances[0];
 
-            mGallery.api.next();
+            $(".next-gallery-slide").on("click", function () {
 
-        });
+                mGallery.api.next();
 
-        var _addTumbCount = function( cIndex ){
+            });
 
-            // dispatches when the slider's current slide change ends.
-            var numS = mGallery.api.count(),
-                index = cIndex;
+            var _addTumbCount = function (cIndex) {
 
-            cIndex += 1;
+                // dispatches when the slider's current slide change ends.
+                var numS = mGallery.api.count(),
+                    index = cIndex;
 
-            cIndex = cIndex < 10 ? "0" + cIndex : cIndex;
+                cIndex += 1;
 
-            numS = numS < 10 ? "0" + numS : numS;
+                cIndex = cIndex < 10 ? "0" + cIndex : cIndex;
 
-            //console.log( mGallery.api.view.currentSlide );
+                numS = numS < 10 ? "0" + numS : numS;
 
-            $(".ms-thumbs-cont .ms-thumb-frame .ms-thumb-ol").eq(index).html( "<span class='mafiran-thumb-num-count'>" + cIndex + "/" + numS + "</span><span class='fa fa-angle-left'></span>" );
-        };
+                //console.log( mGallery.api.view.currentSlide );
 
-        /*mGallery.api.addEventListener( MSSliderEvent.CHANGE_START , function(){
+                $(".ms-thumbs-cont .ms-thumb-frame .ms-thumb-ol").eq(index).html("<span class='mafiran-thumb-num-count'>" + cIndex + "/" + numS + "</span><span class='fa fa-angle-left'></span>");
+            };
 
-            var cIndex = mGallery.api.index() + 1;
+            /*mGallery.api.addEventListener( MSSliderEvent.CHANGE_START , function(){
 
-            _addTumbCount( cIndex );
+             var cIndex = mGallery.api.index() + 1;
 
-        });*/
+             _addTumbCount( cIndex );
 
-        mGallery.api.addEventListener( MSSliderEvent.INIT , function(){
+             });*/
 
-            var numS = mGallery.api.count();
+            mGallery.api.addEventListener(MSSliderEvent.INIT, function () {
 
-            for (i = 0; i < numS; i++) {
-                _addTumbCount( i );
-            }
+                var numS = mGallery.api.count();
 
-        });
+                for (i = 0; i < numS; i++) {
+                    _addTumbCount(i);
+                }
+
+            });
+
+        }
 
     });
 
