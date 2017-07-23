@@ -220,6 +220,12 @@ function mafiran_per_page_query( $query ) {
         $query->set( 'posts_per_page', '6' ); //Change this number to anything you like.
     }
 
+    $is_post_type = in_array( $post_type , array( 'service' ) );
+
+    if ( $query->is_main_query() && ! $query->is_feed() && ! is_admin() && $is_post_type && is_post_type_archive() ) {
+        $query->set( 'posts_per_page', '80' ); //Change this number to anything you like.
+    }
+
 }
 
 
