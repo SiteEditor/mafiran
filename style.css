@@ -12,6 +12,17 @@ Tags:          agency, business, clean, corporate, creative, dms, modern, multi-
 Text Domain:   iott
 */
 
+
+html{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    height:auto
+}
+
+body{
+    overflow:hidden
+}
+
 /* Alignment*/
 .text-left           { text-align: left; }
 .text-right          { text-align: right; }
@@ -24,6 +35,16 @@ Text Domain:   iott
 .text-uppercase      { text-transform: uppercase; }
 .text-capitalize     { text-transform: capitalize; }
 
+
+h5, .main-navigation ul ul a, .site-title, .page .panel-content .recent-posts .entry-title, .page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title, .entry-meta, .entry-footer .cat-links, .entry-footer .tags-links, .nav-subtitle, .comment-metadata, h2.widget-title, .widget_rss .rss-date, .widget_rss li cite, .site-content .wp-playlist-current-item .wp-playlist-item-artist, .twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title, .sed-app-editor.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title {
+    letter-spacing: 0;
+}
+
+a:hover, 
+a:focus, 
+a:active {    
+    outline: none;
+}
 
 .form-group {
     margin-bottom: 15px;
@@ -66,6 +87,19 @@ Text Domain:   iott
     border-left-style: solid;
     border-right-style: none;
 }
+
+.galery-back-btn {
+    position: fixed;
+    z-index: 1000;
+    bottom: 15px;
+    right: 15px;
+    color: #55d861;
+}
+
+.galery-back-btn a {
+    color: #55d861;
+}
+
 
 /***************** col *****************/
 
@@ -985,6 +1019,18 @@ Text Domain:   iott
 
 /***************************/
 
+@media (min-width: 768px) {
+    body .sliders-img .row > [class*=col-],
+    .rtl .sliders-img .row > [class*=col-] {
+        float: right;
+    }
+}
+
+body .sliders-img .row > [class*=col-xs-],
+.rtl .sliders-img .row > [class*=col-xs-] {
+    float: right;
+}
+
 .sliders-img {
     /*position: relative;
     height: 1200px;*/
@@ -1103,7 +1149,7 @@ Text Domain:   iott
 
     .sliders-img .black-box,
     .sliders-img .logo-box {
-        display: none;
+        display: none !important;
     }
 
     .sliders-img .arrows-box {
@@ -1278,7 +1324,7 @@ Text Domain:   iott
     margin: 0 auto -20px;
     display: block;
     position: relative;
-    z-index: 1;
+    z-index: 101;
 }
 
 .sliders-img .single-content-container .title h4 {
@@ -1310,7 +1356,13 @@ Text Domain:   iott
 /**************************/
 
 .single-product .sliders-img .black-box {
-    min-height: 180px;
+    min-height: 180px;  
+    -webkit-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -o-transform: translate(100%);
+    transform: translate(100%);
+    display: block;
 }
 
 .single-product .sliders-img .single-content-container ,
@@ -1319,18 +1371,22 @@ Text Domain:   iott
     padding: 0;
 }
 
+.single-product .sliders-img .desc .sed-stb-sm {
+    padding: 0;
+}
+
 @media (min-width: 768px) {
 
     .single-product .slide-container.slide-third {
-        margin-top: -150px;
+        margin-top: 60px;
     }
 
     .single-product .sliders-img .single-content-container {
-        margin: 20px 40px 20px 0;
+        margin: 20px 15px 20px 0;
     }
 
     .rtl .single-product .sliders-img .single-content-container {
-        margin: 20px 0 20px 40px;
+        margin: 20px 0 20px 15px;
     }
 
     .single-product .sliders-img .content-container {
@@ -1345,6 +1401,33 @@ Text Domain:   iott
 
 
 /**************************/
+
+.archive-product-post-type.archive-custom-post-type .row {
+    margin: 0 -25px;
+}
+
+.archive-product-post-type.archive-custom-post-type .post {
+    margin: 30px 10px;
+}
+
+.category-items {
+    padding: 40px 30px 0 0;    
+    max-width: 300px;
+}
+
+.rtl .category-items {
+    padding: 40px 0 0 30px;
+}
+
+@media (max-width: 768px) {
+
+    .category-items ,
+    .rtl .category-items {
+        padding: 30px;   
+        margin: 0 auto;
+    }
+
+}
 
 .category-items ul {
     list-style-type: none;
@@ -1422,9 +1505,6 @@ Text Domain:   iott
     transition: all .3s ease;    
 }
 
-.archive-service-post-type .header-wrap:hover,
-.archive-service-post-type .header-wrap:focus,
-.archive-service-post-type .header-wrap:active,
 .archive-service-post-type .header-wrap.ui-accordion-header-active {
     background-color: #3d3d3d;
 }
@@ -1469,6 +1549,64 @@ Text Domain:   iott
 }
 
 
+.archive-service-post-type .header-wrap {
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); 
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; 
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.archive-service-post-type .header-wrap:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #3d3d3d;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.archive-service-post-type .header-wrap:hover:before,
+.archive-service-post-type .header-wrap:focus:before,
+.archive-service-post-type .header-wrap:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+/*.archive-service-post-type .header-wrap:after {
+  width: 0;
+  height: 1.5rem;
+  left: 50%;
+  margin-left: -5rem;
+  position: absolute;
+  content: "";
+  bottom: 2.5rem;
+  -webkit-transition: width linear 0.5s;
+  transition: width linear 0.5s;
+  background: #55d861;
+}
+.archive-service-post-type .header-wrap:hover:after,
+.archive-service-post-type .header-wrap:focus:after,
+.archive-service-post-type .header-wrap:active:after {
+  width: 10rem;
+}*/ 
+
+
 /***********************************/
 
 .archive-service-tabs ul {
@@ -1479,10 +1617,12 @@ Text Domain:   iott
 
 .archive-service-tabs ul li {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 5px 5px;
     border: 2px solid transparent;
-    border-top: none;
+    /* border-top: none; */
     padding: 15px 20px;
+    position: relative;
+    z-index: 101;
 }
 
 .archive-service-tabs ul li.ui-tabs-active {
@@ -1593,11 +1733,30 @@ Text Domain:   iott
     transition: all 0.6s ease 1s;
 }
 
+/*************************/
+
+.malinky-load-more {
+    margin-top: 20px;
+}
+
+#malinky-ajax-pagination-button:after {
+    content: "\f103";
+    font-family: FontAwesome;
+    width: 100%;
+    display: grid;
+    font-size: 20px;
+    color: #55d861;
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+
+
 /************************/
 
 .intro-wrap {
     content: "";
-    display: block;
+    display: none; 
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1614,6 +1773,11 @@ Text Domain:   iott
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
+
+.has-intro .intro-wrap { 
+    display: none; 
+}    
+
 
 .intro-wrap .intro-wrap-inner {
     position: absolute;
@@ -1713,3 +1877,4 @@ body.remove-intro .intro-wrap .intro-wrap-inner {
             transform: rotate(360deg);
   }
 }
+

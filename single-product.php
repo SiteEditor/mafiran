@@ -89,7 +89,7 @@ get_header(); ?>
 
                             <div class="clear"></div>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                                 <div class="single-content-container">
 
                                     <div class="content-inner">
@@ -102,6 +102,8 @@ get_header(); ?>
 
                                 </div>
                             </div>
+
+                            <div class="col-sm-1">&nbsp;</div>
 
                             <div class="col-sm-2">
                                 <div class="slide-container slide-second">
@@ -121,19 +123,12 @@ get_header(); ?>
                                     }
                                     ?>
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="black-box">&nbsp;</div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="clear"></div>
-
-                            <div class="col-sm-5">&nbsp;</div>
-
-                            <div class="col-sm-1 text-left">
-                                <div class="black-box">&nbsp;</div>
-                            </div>
-
-                            <div class="col-sm-2">&nbsp;</div>
-
-
 
                             <div class="col-sm-3">
                                 <div class="slide-container slide-third">
